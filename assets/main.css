@@ -9,6 +9,7 @@ html, body{
    height: auto;
 }
 
+/*NAV-BAR*/
 .nav-bar-outer{
     height: 80px;
     width: 100%;
@@ -16,10 +17,10 @@ html, body{
     display: flex;
     align-items: center;
     padding: 30px;
-    position: fixed;
+    /*position: fixed;
+    z-index: 100;*/
 }
 
-/*NAV-BAR*/
 .nav-bar{
     width: 100%;
     height: auto;
@@ -63,3 +64,80 @@ html, body{
     color: green;
 }
 
+.narrow-nav-bar{
+    display: none;
+}
+/*Smartphone view*/
+@media only screen and (max-width: 600px){
+    .nav-bar{
+        display: none;
+    }
+
+    .nav-bar-outer{
+        padding: 0;
+        height: auto;
+    }
+
+    .narrow-nav-bar{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .narrow-nav-bar-initial{
+        display: flex;
+        border-bottom: 1px solid black;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    #narrow-nav-bar-drop-down-closed{
+        font-size: 25px;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+
+    #narrow-nav-bar-drop-down-open{
+        display: none;
+        font-size: 25px;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+
+    .nav-pages-icon{
+        margin-right: 110px;
+        padding: 20px 0;
+    }
+
+    .narrow-nav-pages{
+        display: none;
+        margin-top: 115px;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+        padding: 0;
+        padding-bottom: 40px;
+        background:#f5f4f4;
+    }
+
+    .narrow-nav-items{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 40px;
+        padding-top: 40px;
+    }
+    
+    .narrow-nav-bar a{
+        text-decoration: none;
+        font-size: 25px;
+        text-wrap: nowrap;
+        color: green;
+    }
+}
+
+
+/*Carousel*/
