@@ -10,37 +10,34 @@ html, body{
 }
 
 .nav-bar-outer{
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     width: 100%;
     background:#f5f4f4;
     display: flex;
     align-items: center;
-    padding: 30px;
-    position: fixed;
+    padding: 0 20px;
 }
 
 /*NAV-BAR*/
 .nav-bar{
-    width: 100%;
-    height: auto;
+    flex-grow: 1;
     display: flex;
-    justify-content: center;
-    gap: 200px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
     
 }
 
 .nav-pages{
     display: flex;
-    height: auto;
     justify-content: flex-end;
-
+    flex-shrink: 1;
 }
 
 .nav-pages-icon{
     width: 180px;
     height: auto;
-    display:flex;
-    align-items: center;
 }
 
 .nav-bar ul{
@@ -50,16 +47,90 @@ html, body{
 .nav-pages li{
     list-style-type: none;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .nav-bar a{
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     text-wrap: nowrap;
     color: green;
 }
 
+.narrow-nav-bar{
+    display: none;
+}
+/*Smartphone view*/
+@media only screen and (max-width: 720px){
+    .nav-bar{
+        display: none;
+    }
+
+    .nav-bar-outer{
+        padding: 0;
+    }
+
+    .narrow-nav-bar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .narrow-nav-bar-initial{
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    #narrow-nav-bar-drop-down-closed{
+        font-size: 25px;
+        cursor: pointer;
+        
+    }
+
+    #narrow-nav-bar-drop-down-open{
+        display: none;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .nav-pages-icon{
+        /*introduce a way to make it go in the middle*/
+        padding: 20px 0;
+    }
+
+    .narrow-nav-pages{
+        display: none;
+        border-top: 1px solid black;
+        width: 100%;
+        z-index: 100;
+        padding: 0;
+        padding-bottom: 40px;
+        background:#f5f4f4;
+    }
+
+    .narrow-nav-items{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 40px;
+        padding-top: 40px;
+    }
+    
+    .narrow-nav-bar a{
+        text-decoration: none;
+        font-size: 25px;
+        text-wrap: nowrap;
+        color: green;
+    }
+}
+
+.carousel-container{
+}
