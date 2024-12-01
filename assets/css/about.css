@@ -1,0 +1,46 @@
+.contact-page-outer{
+    height: auto;
+    width: 100%;
+}
+
+.contact-page-selection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-page-buttons-outer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    border: solid 1px yellow;
+    padding: 0 15%;
+}
+
+.contact-page-buttons{
+    width: 100%;
+    height: auto;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contact-page-buttons-icon{
+    height: 150px;
+    width: 150px;
+    border: solid 1px red;
+    display: flex; 
+    padding: 5%;
+}
+
+.contact-page-buttons-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-gluten, #icon-work, #icon-phone{
+    height: auto;
+    width: 100%;
+}
+
