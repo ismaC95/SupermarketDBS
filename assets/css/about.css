@@ -20,8 +20,8 @@ img{
     color: white;
     font-weight: bolder;
     text-shadow: 3px 3px black;
-    top: 23%;
-    left: 3%;
+    top: 150px;
+    left: 30px;
 }
 
 /* --------CONTACT FORM SELECTION --------*/
@@ -30,7 +30,7 @@ img{
     flex-direction: column;
     align-items: center;
     /* border: solid 1px yellow; */
-    padding: 30px 0;
+    padding: 70px 0;
 }
 
 .contact-page-buttons-outer{
@@ -97,4 +97,36 @@ img{
     font-weight: bold;
 }
 
+/* -------- CONTACT FORM --------*/
+.contact-form-outer{
+    display: flex;
+    flex-grow: 1;
+    border: solid 1px red;
+}
 
+.contact-form-info-text{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 30%;
+    border: solid 1px yellow;
+    background: #bebebe;
+    padding: 30px;
+}
+
+.contact-form-info-text h1{
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.contact-form-info-text h2{
+    padding: 15px 0;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.contact-form-info-text p{
+    padding: 15px 0;
+    font-size: 20px;  
+}
