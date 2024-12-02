@@ -1,46 +1,100 @@
+.image-container{
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+img{
+    width:100%;
+    height: auto;
+}
+
 .contact-page-outer{
     height: auto;
     width: 100%;
+    position: relative;
 }
 
+#contact-page-title{
+    position: absolute;
+    font-size: 45px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 3px 3px black;
+    top: 23%;
+    left: 3%;
+}
+
+/* --------CONTACT FORM SELECTION --------*/
 .contact-page-selection{
     display:flex;
     flex-direction: column;
     align-items: center;
+    /* border: solid 1px yellow; */
+    padding: 30px 0;
 }
+
 .contact-page-buttons-outer{
     width: 100%;
     height: auto;
     display: flex;
-    border: solid 1px yellow;
+    /* border: solid 1px yellow; */
     padding: 0 15%;
+    gap: 20px;
 }
 
 .contact-page-buttons{
     width: 100%;
     height: auto;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding: 0 30px;
 }
+
 .contact-page-buttons-icon{
+    /* height: auto;
+    width: 100%; */
     height: 150px;
-    width: 150px;
-    border: solid 1px red;
-    display: flex; 
+    width:150px;
+    max-width: 150px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5%;
+    flex-shrink: 1;
+    /* border: solid 1px red; */
+
 }
 
 .contact-page-buttons-icon{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #icon-gluten, #icon-work, #icon-phone{
     height: auto;
     width: 100%;
+    cursor: pointer;
 }
+
+.contact-page-buttons-text{
+    /* border: solid 1px red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact-page-buttons-text-title{
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 

@@ -25,7 +25,7 @@ html, body{
     padding: 0 40px;
 }
 
-/*NAV-BAR*/
+/*--------NAV-BAR--------*/
 .nav-bar{
     flex-grow: 1;
     display: flex;
@@ -71,7 +71,7 @@ html, body{
     display: none;
 }
 
-/* 900px view */
+/* --------900px view-------- */
 @media only screen and (max-width: 900px){
     .nav-bar-outer{
         padding: 0 20px;
@@ -84,7 +84,7 @@ html, body{
     }
 }
 
-/*Smartphone view*/
+/*--------Smartphone view--------*/
 @media only screen and (max-width: 720px){
     .nav-bar{
         display: none;
