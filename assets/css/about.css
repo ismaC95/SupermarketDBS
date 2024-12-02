@@ -97,36 +97,120 @@ img{
     font-weight: bold;
 }
 
-/* -------- CONTACT FORM --------*/
+/* -------- CONTACT FORM INFO--------*/
 .contact-form-outer{
     display: flex;
     flex-grow: 1;
-    border: solid 1px red;
+    /* border: solid 1px red;  */
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding: 20px 75px;
 }
 
+.contact-form-info-outer{
+    display: flex;
+    width: 100%;
+    /* border: solid 1px blue; */
+    justify-content: center;
+}
 .contact-form-info-text{
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 30%;
-    border: solid 1px yellow;
-    background: #bebebe;
+    width: 100%;
+    max-width: 500px;
+    /* width: 30%; */
+    border: solid 3px green;
+    background: #ebeaea;
     padding: 30px;
+    border-radius: 5px;
 }
 
 .contact-form-info-text h1{
     padding: 20px 0;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
 }
 
 .contact-form-info-text h2{
     padding: 15px 0;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bolder;
 }
 
 .contact-form-info-text p{
     padding: 15px 0;
-    font-size: 20px;  
+    font-size: 18px; 
+
+}
+
+/* -------- CONTACT FORM --------*/
+.contact-form-inner{
+    width: 100%;
+    height: auto;
+    /* border: solid 1px black; */
+    display: flex;
+    justify-content: center;
+    /* padding: 20px; */
+    /* margin: 50px; */
+}
+.contact-form-inner form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: solid 1px blueviolet; */
+
+}
+
+.contact-form-inner form select{
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+form select option[disabled]{
+    color: grey !important;
+    background-color: #f5f5f5;
+}
+
+.contact-form-inner form input{
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.contact-form-fullname{
+    display: flex;
+    width: 600px;
+    /* border: solid 1px black; */
+    gap: 5px;
+    margin-top: 0px;
+}
+
+.contact-form-inner form textarea{
+    width: 600px;
+    height: auto;
+    min-height: 150px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 20px;
+}
+.contact-form-inner form input[type=submit]{
+    background: green;
+    border: 2px solid grey;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/*------- CONTACT FORM OPTIONS CHANGES -------*/
+.gluten-free-active, .work-with-us-active, .customer-service-active{
+    display: none;
+}
+
+.gluten-product-active, .gluten-general-question-active{
+    display: none;
 }
