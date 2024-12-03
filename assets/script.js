@@ -26,10 +26,10 @@ $(document).ready(function() {
         }
 
         //Gluten-free Options selection
-        if(selectedOption==="Gluten-free Food"){
+        if(selectedOption === "Gluten-free Food"){
             $(document).on("change", "#gluten-options", () =>{
                 var glutenOption = $("#gluten-options").val()
-                
+
                 $(".gluten-product-active").hide();
 
                 if(glutenOption === "Gluten-free product"){
@@ -41,6 +41,15 @@ $(document).ready(function() {
                     $("#description").attr("placeholder", "*Tell us what you need");
                 }
             });
+        }
+        //Work Options selection
+        else if(selectedOption === "Work with us"){
+            $("#description").attr("placeholder", "*Cover Letter");
+        }
+
+        //Customer service Options selection
+        else if(selectedOption === "Customer service"){
+            $("#description").attr("placeholder", "*Describe your issue");
         };
     });
 });

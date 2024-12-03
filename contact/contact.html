@@ -122,8 +122,9 @@
                                     <option value="Gluten-free Food">Gluten-free Food</option>
                                     <option value="Work with us">Work with us</option>
                                     <option value="Customer service">Customer service</option>
-                                    <option value="Other">Other</option>
                                 </select>
+
+                                <!-- Gluten free option selected -->
                                 <div class="gluten-free-active">
                                     <select id="gluten-options" name="gluten-options" required>
                                         <option id="gluten-option-placeholder" value="" disabled selected>*What do you need?</option>
@@ -135,7 +136,16 @@
                                         <input  type="text" id="gluten-url" placeholder="Recommended Product URL (optional)">
                                     </div>
                                 </div>
-                                <!-- <input type="file" id="cv" name="cv"> -->
+
+                                <!-- Work with us  option selected -->
+                                <div class="work-with-us-active">
+                                    <input type="text" id="linkedin" placeholder="LinkedIn URL (optional)">
+                                    <input type="text" id="work-URL" placeholder="Any other personal website URL (optional)">
+                                    <div class="form-attachment">
+                                        <label for="cv">*Curriculum:</label>
+                                        <input type="file" id="cv" name="cv" required>
+                                    </div>
+                                </div>
                                 <textarea  id="description" name="description" placeholder="*Describe your issue" required></textarea>
                                 <input type="submit" value="Submit">
                             </form>
