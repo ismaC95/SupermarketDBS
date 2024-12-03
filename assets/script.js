@@ -68,4 +68,7 @@ $(document).ready(function() {
     //ending in a dot and after the required dot, it allows starting with any letter or 
     //number, adding zero or more letters, numbers or - and must end in a letter or number
     const emailValidation = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
+    //is necessary to have at some point in the input "linkedin."
+    const linkedInValidation = /\blinkedin\.\b/i;
 });
