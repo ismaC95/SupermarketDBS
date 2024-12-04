@@ -138,18 +138,18 @@ $(document).ready(function() {
             $(".contact-form-phone-outer .first-error").hide(200);
             $(".contact-form-phone-outer .second-error").hide(200);
 
-            errorCount[3] = 0;
+            errorCount[2] = 0;
         }
         else{
-            errorCount[3]++;
+            errorCount[2]++;
             readySubmit = false;
 
             //showing error messages
-            if(errorCount[3] === 1){
+            if(errorCount[2] === 1){
                 $(".phone-error").show(200);
                 $(".contact-form-phone-outer .first-error").show(200);  
             }
-            else if(errorCount[3] >= 2){
+            else if(errorCount[2] >= 2){
                 $(".contact-form-phone-outer .second-error").show(200);
             }
         }
