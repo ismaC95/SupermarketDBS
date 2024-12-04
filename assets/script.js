@@ -17,7 +17,7 @@ $(document).ready(function() {
     //CONTACT-FORM Topic option selected
     $(document).on("change", "#form-options", () =>{
         //getting the value of the selected option
-        var selectedOption = $("#form-options").val();
+        let selectedOption = $("#form-options").val();
 
         //making all the variations hide every time there's a change in the options
         $(".gluten-free-active, .work-with-us-active, .customer-service-active").hide(200);
@@ -38,7 +38,7 @@ $(document).ready(function() {
         //Gluten-free Options selection
         if(selectedOption === "Gluten-free Food"){
             $(document).on("change", "#gluten-options", () =>{
-                var glutenOption = $("#gluten-options").val()
+                let glutenOption = $("#gluten-options").val()
 
                 $(".gluten-product-active").hide();
                 $("#gluten-options").prop("required", true);
@@ -68,44 +68,113 @@ $(document).ready(function() {
     //CONTACT-FORM Validation
     //validation regex
     const nameValidation = /^[A-Za-z]+([ -']?[A-Za-z]+)*$/;
-    const phoneValidation = /^\+?[0-9]{1,3}?[ -]?[0-9]{8,15}$/;
+    const phoneValidation = /^\+?[0-9]{9,20}$/;
     const emailValidation = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    const linkedInValidation = /\blinkedin\.\b/i;
+    const linkedinValidation = /\blinkedin\.\b/i;
     
-    var nameErrorCount = 0;
+    let errorCount = [0, 0, 0, 0];
+    //errorCount[0] is for name errors
+    //errorCount[1] is for email errors
+    //errorCount[2] is for phone errors
+    //errorCount[3] is for linkedIn errors
 
     $(document).on("submit", "#contact-form", function(event){
-        event.preventDefault();
 
+        let readySubmit = true;
+
+        //storing inputs to be validated
         nameInput = $("#name").val();
         lastNameInput = $("#lastname").val();
-        
-        console.log(nameInput);
+        emailInput = $("#email").val();
+        phoneInput = $("#phone").val();
+        linkedinInput = $("#linkedin").val();
+
+        //name validation and error messages
         if(nameInput.match(nameValidation) && lastNameInput.match(nameValidation)){
-            console.log("Name correct");
             $(".name-error").hide(200);
             $(".contact-form-fullname-outer .first-error").hide(200);
             $(".contact-form-fullname-outer .second-error").hide(200);
 
-            nameErrorCount = 0;
+            errorCount[0] = 0;
         }
         else{
-            console.log("Name invalid");
-            nameErrorCount++;
-            
-            console.log(nameErrorCount);
-
+            errorCount[0]++;
+            readySubmit = false;
             //showing error messages
-            if(nameErrorCount === 1){
+            if(errorCount[0] === 1){
                 $(".name-error").show(200);
                 $(".contact-form-fullname-outer .first-error").show(200);  
             }
-            else if(nameErrorCount >= 2){
+            else if(errorCount[0] >= 2){
                 $(".contact-form-fullname-outer .second-error").show(200);
-
             }
         }
 
+        //email validation and error messages
+        if(emailInput.match(emailValidation)){
+            $(".email-error").hide(200);
+            $(".contact-form-email-outer .first-error").hide(200);
+            $(".contact-form-email-outer .second-error").hide(200);
+
+            errorCount[1] = 0;
+        }
+        else{
+            errorCount[1]++;
+            readySubmit = false;
+            
+            //showing error messages
+            if(errorCount[1] === 1){
+                $(".email-error").show(200);
+                $(".contact-form-email-outer .first-error").show(200);  
+            }
+            else if(errorCount[1] >= 2){
+                $(".contact-form-email-outer .second-error").show(200);
+            }
+        }
+
+        //phone number validation and error messages
+        if(phoneInput.match(phoneValidation) ||  phoneInput === ""){
+            $(".phone-error").hide(200);
+            $(".contact-form-phone-outer .first-error").hide(200);
+            $(".contact-form-phone-outer .second-error").hide(200);
+
+            errorCount[3] = 0;
+        }
+        else{
+            errorCount[3]++;
+            readySubmit = false;
+
+            //showing error messages
+            if(errorCount[3] === 1){
+                $(".phone-error").show(200);
+                $(".contact-form-phone-outer .first-error").show(200);  
+            }
+            else if(errorCount[3] >= 2){
+                $(".contact-form-phone-outer .second-error").show(200);
+            }
+        }
+
+        //linkedIn validation and error messages
+        if(linkedinInput.match(linkedinValidation) || linkedinInput === ""){
+            $(".work-error").hide(200);
+            $(".contact-form-linkedin .first-error").hide(200);
+
+            errorCount[3] = 0;
+        }
+        else{
+            errorCount[3]++;
+            readySubmit = false;
+
+            //showing error messages
+            if(errorCount[3] >= 1){
+                $(".work-error").show(200);
+                $(".contact-form-linkedin .first-error").show(200);  
+            }
+        }
+
+        if(!readySubmit){
+            event.preventDefault();
+        }
     })
 
 
