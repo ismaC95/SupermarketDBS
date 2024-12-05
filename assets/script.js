@@ -9,13 +9,15 @@ $(document).ready(function() {
     //------------------ CONTACT FORM ---------------
 
 
-    //making required form elements that are not shown non-required
-    $("#gluten-options").prop("required", false);
-    $("#gluten-new-product").prop("required", false);
-    $("#cv").prop("required", false);
+    
 
     //CONTACT-FORM Topic option selected
     $(document).on("change", "#form-options", () =>{
+        //making required form elements that are not shown non-required
+        $("#gluten-options").prop("required", false);
+        $("#gluten-new-product").prop("required", false);
+        $("#cv").prop("required", false);
+
         //getting the value of the selected option
         let selectedOption = $("#form-options").val();
 
@@ -46,22 +48,22 @@ $(document).ready(function() {
                 if(glutenOption === "Gluten-free product"){
                     $(".gluten-product-active").show();
                     //changing textarea attribute placeholder to match the option selected instead of creating a new textarea
-                    $("#description").attr("placeholder", "*Why do you recommend this product?");
+                    $("#description").attr("placeholder", "*Why do you recommend this product? (minimum 100 characters)");
                 }
                 else{
-                    $("#description").attr("placeholder", "*Tell us what you need");
+                    $("#description").attr("placeholder", "*Tell us what you need (minimum 100 characters)");
                 }
             });
         }
         //Work Options selection
         else if(selectedOption === "Work with us"){
-            $("#description").attr("placeholder", "*Cover Letter");
+            $("#description").attr("placeholder", "*Cover Letter (minimum 100 characters)");
             $("#cv").prop("required", true);
         }
 
         //Customer service Options selection
         else if(selectedOption === "Customer service"){
-            $("#description").attr("placeholder", "*Describe your issue");
+            $("#description").attr("placeholder", "*Describe your issue (minimum 100 characters)");
         };
     });
 
@@ -71,12 +73,14 @@ $(document).ready(function() {
     const phoneValidation = /^\+?[0-9]{9,20}$/;
     const emailValidation = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     const linkedinValidation = /\blinkedin\.\b/i;
+    const textValidation = /^.{100,}$/i;
     
-    let errorCount = [0, 0, 0, 0];
+    let errorCount = [0, 0, 0, 0, 0];
     //errorCount[0] is for name errors
     //errorCount[1] is for email errors
     //errorCount[2] is for phone errors
     //errorCount[3] is for linkedIn errors
+    //errorCount[4] is for textarea errors
 
     $(document).on("submit", "#contact-form", function(event){
 
@@ -88,6 +92,7 @@ $(document).ready(function() {
         emailInput = $("#email").val();
         phoneInput = $("#phone").val();
         linkedinInput = $("#linkedin").val();
+        textInput = $("#description").val();
 
         //name validation and error messages
         if(nameInput.match(nameValidation) && lastNameInput.match(nameValidation)){
@@ -172,8 +177,28 @@ $(document).ready(function() {
             }
         }
 
+        //textarea validation
+        if(!textInput.match(textValidation)){
+            readySubmit = false;
+        }
+
+
         if(!readySubmit){
             event.preventDefault();
+        }
+    })
+
+    //textarea error message if less than 100 characters
+    $(document).on("keyup", "#description", function(){
+        let textInput = $("#description").val();
+
+        if(textInput.match(textValidation) || textInput === ""){
+            $(".textarea-error").hide(200);
+            $(".contact-form-fullname-outer .first-error").hide(200); 
+        }
+        else{
+            $(".textarea-error").show(200);
+            $(".textarea-error .first-error").show(200); 
         }
     })
 

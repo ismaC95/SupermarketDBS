@@ -12,6 +12,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
         <link href="../assets/main.css" rel="stylesheet" type="text/css">
         <link href="../assets/css/about/about.css" rel="stylesheet" type="text/css";>
+        <link href="../assets/css/breakpoints/smartphone.css" rel="stylesheet" type="text/css";>
         <link href="../assets/images/logo.png" rel="icon" type="image/icon">
         <script defer type="text/javascript" src="../assets/script.js"></script>
     </head>
@@ -24,7 +25,9 @@
                         <div class="narrow-nav-bar">
                             <div class="narrow-nav-bar-initial">
                                 <i id="narrow-nav-bar-drop-down-closed" class="fas fa-bars" style="color: green;"></i>
-                                <a href="../index.html"><image class="nav-pages-icon" src="../assets/images/nav-bar-logo.png"></image></a>
+                                <div class="narrow-nav-bar-icon-outer">
+                                    <a href="../index.html"><image class="nav-pages-icon" src="../assets/images/nav-bar-logo.png"></image></a>
+                                </div>
                             </div>
                             <ul class="narrow-nav-pages">
                                 <li class="narrow-nav-items"><a href="../deals/deals.html">Weekly Deals</a></li>
@@ -59,10 +62,10 @@
                                 </div>
                                 <div class="contact-page-buttons-text">
                                     <div class="contact-page-buttons-text-title">
-                                        Gluten-free Food
+                                        <h3>Gluten-free Food</h3>
                                     </div>
                                     <div class="contact-page-buttons-text-body">
-                                        Are we missing any gluten-free product that you are looking for? Let us know!
+                                        <p>Are we missing any gluten-free product that you are looking for? Let us know!</p>
                                     </div>
                                 </div>
                             </div>
@@ -72,10 +75,10 @@
                                 </div>  
                                 <div class="contact-page-buttons-text">
                                     <div class="contact-page-buttons-text-title">
-                                        Work with us
+                                        <h3>Work with us</h3>
                                     </div>
                                     <div class="contact-page-buttons-text-body">
-                                        Share your CV with us! We are always looking for new talent
+                                        <p>Share your CV with us! We are always looking for new talent</p>
                                     </div>
                                 </div>
                             </div>
@@ -85,10 +88,10 @@
                                 </div>
                                 <div class="contact-page-buttons-text">
                                     <div class="contact-page-buttons-text-title">
-                                        Feedback
+                                        <h3>Feedback</h3>
                                     </div>
                                     <div class="contact-page-buttons-text-body">
-                                        Tell us about your experience with us
+                                        <p>Tell us about your experience with us</p>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +113,7 @@
                             </article>
                         </div>
                         <div class="contact-form-inner"> <!--Contact form-->
-                            <form method="get" id="contact-form" action="./submitted.html">
+                            <form method="get" id="contact-form" action="./submitted.html" autocomplete="on">
                                 <div class="contact-form-fullname-outer">
                                     <div class="contact-form-fullname">
                                         <input type="text" id="name" name="name" placeholder="*First Name" required>
@@ -118,7 +121,7 @@
                                     </div>
                                 <!-- Error message filling name fields -->
                                     <div class="name-error">
-                                        <h1 class="firt-error">Invalid Name or Last Name</h1>
+                                        <h1 class="first-error">Invalid Name or Last Name</h1>
                                         <div class="second-error">
                                             <p class="second-error-body">Allowed characters:</p>
                                             <ul class="second-error-list">
@@ -133,7 +136,7 @@
                                     <input type="email" id="email" name="email" placeholder="*Email" required>
                                 <!-- Error message filling email field -->
                                     <div class="email-error">
-                                        <h1 class="firt-error">Invalid email</h1>
+                                        <h1 class="first-error">Invalid email</h1>
                                         <div class="second-error">
                                             <p class="second-error-body">Requirements:</p>
                                             <ul class="second-error-list">
@@ -148,7 +151,7 @@
                                     <input type="number" id="phone" name="phone" placeholder="Phone number (optional)">
                                     <!-- Error message filling phone field -->
                                     <div class="phone-error">
-                                        <h1 class="firt-error">Invalid Phone number</h1>
+                                        <h1 class="first-error">Invalid Phone number</h1>
                                         <div class="second-error">
                                             <p class="second-error-body">Requirements:</p>
                                             <ul class="second-error-list">
@@ -186,7 +189,7 @@
                                         <input type="text" id="linkedin" placeholder="LinkedIn URL (optional)">
                                         <!-- Error message filling phone field -->
                                         <div class="work-error">
-                                            <h1 class="firt-error">Invalid LinkedIn URL</h1>
+                                            <h1 class="first-error">Invalid LinkedIn URL</h1>
                                         </div>
                                     </div>
                                     <input type="text" id="work-URL" placeholder="Any other personal website URL (optional)">
@@ -195,7 +198,12 @@
                                         <input type="file" id="cv" name="cv" required>
                                     </div>
                                 </div>
-                                <textarea  id="description" name="description" placeholder="*Describe your issue" required></textarea>
+                                <div id="textarea-outer">
+                                    <textarea  id="description" name="description" placeholder="*Describe your issue (minimum 100 characters)" required></textarea>
+                                    <div class="textarea-error">
+                                        <h1 class="first-error">Minimum 100 characters</h1>
+                                    </div>
+                                </div>    
                                 <input id="submit" type="submit" value="Submit">
                             </form>
                         </div>

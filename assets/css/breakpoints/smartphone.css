@@ -1,0 +1,121 @@
+/* smartphone view 0-480px */
+@media only screen and (max-width: 480px){
+    /* -------CONTACT US PAGE------- */
+    
+    /* image */
+    /* -------TO DO------- */
+
+    #contact-page-title{
+        display: none;
+    }
+
+    /* icons */
+    .contact-page-selection{
+        /* border: black 1px solid; */
+        margin: 40px 0;
+        padding: 0;
+    }
+
+    .contact-page-buttons{
+        /* border: red 1px solid; */
+    }
+
+    .contact-page-buttons-outer{
+        /* border: pink 1px solid; */
+        flex-direction: column;
+        padding: 0;
+        gap: 40px;
+    }
+
+    .contact-page-buttons{
+        /* border: 1px solid yellow; */
+        flex-direction: row;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .contact-page-buttons-icon{
+        /* border: 1px solid blue; */
+        padding: 0;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #icon-phone, #icon-work, #icon-gluten{
+        height: 50px;
+        width: 50px;
+    }
+
+    .contact-page-buttons-text{
+        /* border: 1px solid purple; */
+        width: 100%;
+        padding: 0;
+        font-size: 14px;
+        align-items: flex-start;
+        text-align: start;
+    }
+    .contact-page-buttons-text-title{
+        font-size: 16px;
+        padding: 0;
+    }
+
+    /* Contact details */
+
+    .contact-form-outer{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-form-info-text{
+        width: 100%;
+        padding: 10px;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+    }
+
+    .contact-form-info-text h1{
+        padding: 0;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .contact-form-info-text h2{
+        padding: 0;
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+    .contact-form-info-text p{
+        padding: 0;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    /* Contact form */
+    .contact-form-inner{
+        width: 100%;
+    }
+    
+    #contact-form input,
+    #contact-form select,
+    #contact-form textarea,
+    #contact-form label{
+        font-size: 14px;
+    }
+    
+    .name-error h1,
+    .email-error h1,
+    .phone-error h1,
+    .work-error h1,
+    .textarea-error h1{
+        font-size: 14px;
+    }
+
+    .second-error p,
+    .second-error li{
+        font-size: 13px;
+    }
+
+}
