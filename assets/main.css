@@ -2,6 +2,7 @@
     margin:0; 
     font-family:roboto;
     box-sizing: border-box;
+
 }
 
 html, body{
@@ -9,39 +10,40 @@ html, body{
    height: auto;
 }
 
-/*NAV-BAR*/
+#wrapper{
+    width: 100%;
+    min-height: 100%;
+}
+
 .nav-bar-outer{
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     width: 100%;
     background:#f5f4f4;
     display: flex;
     align-items: center;
-    padding: 30px;
-    /*position: fixed;
-    z-index: 100;*/
+    padding: 0 40px;
 }
 
+/*--------NAV-BAR--------*/
 .nav-bar{
-    width: 100%;
-    height: auto;
+    flex-grow: 1;
     display: flex;
-    justify-content: center;
-    gap: 200px;
-    
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
 
 .nav-pages{
     display: flex;
-    height: auto;
     justify-content: flex-end;
-
+    flex-shrink: 1;
+    margin-top: 5px;
 }
 
 .nav-pages-icon{
     width: 180px;
     height: auto;
-    display:flex;
-    align-items: center;
 }
 
 .nav-bar ul{
@@ -51,15 +53,16 @@ html, body{
 .nav-pages li{
     list-style-type: none;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .nav-bar a{
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     text-wrap: nowrap;
     color: green;
 }
@@ -67,55 +70,60 @@ html, body{
 .narrow-nav-bar{
     display: none;
 }
-/*Smartphone view*/
-@media only screen and (max-width: 600px){
+
+/* --------900px view-------- */
+@media only screen and (max-width: 900px){
+    .nav-bar-outer{
+        padding: 0 20px;
+    }
+    .nav-bar{
+        gap: 20px;
+    }
+    .nav-bar a{
+        font-size: 14px;
+    }
+}
+
+/*--------Smartphone view--------*/
+@media only screen and (max-width: 720px){
     .nav-bar{
         display: none;
     }
 
     .nav-bar-outer{
         padding: 0;
-        height: auto;
     }
 
     .narrow-nav-bar{
         width: 100%;
-        height: auto;
         display: flex;
         flex-direction: column;
     }
 
     .narrow-nav-bar-initial{
         display: flex;
-        border-bottom: 1px solid black;
-        justify-content: space-between;
+        height: auto;
+        justify-content: flex-start;
         align-items: center;
-        padding: 20px 0;
+        padding: 0 20px;
+        gap: 20px;
+        margin-left: 20px;
     }
     
     #narrow-nav-bar-drop-down-closed{
         font-size: 25px;
-        margin-left: 40px;
-        cursor: pointer;
-    }
-
-    #narrow-nav-bar-drop-down-open{
-        display: none;
-        font-size: 25px;
-        margin-left: 40px;
         cursor: pointer;
     }
 
     .nav-pages-icon{
-        margin-right: 110px;
+        /*introduce a way to make it go in the middle*/
         padding: 20px 0;
     }
 
     .narrow-nav-pages{
         display: none;
-        margin-top: 115px;
+        border-top: 1px solid black;
         width: 100%;
-        position: relative;
         z-index: 100;
         padding: 0;
         padding-bottom: 40px;
@@ -139,5 +147,3 @@ html, body{
     }
 }
 
-
-/*Carousel*/
