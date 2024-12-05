@@ -16,10 +16,6 @@
         padding: 0;
     }
 
-    .contact-page-buttons{
-        /* border: red 1px solid; */
-    }
-
     .contact-page-buttons-outer{
         /* border: pink 1px solid; */
         flex-direction: column;
