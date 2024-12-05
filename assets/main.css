@@ -151,3 +151,30 @@ html, body{
     }
 }
 
+/* HEADING IMAGE AND TITLE */
+
+.image-container{
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+}
+img{
+    width:100%;
+    height: auto;
+}
+
+.contact-page-outer{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+#contact-page-title{
+    position: absolute;
+    font-size: 45px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 3px 3px black;
+    top: 160px;
+    left: 40px;
+}
