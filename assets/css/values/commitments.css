@@ -1,3 +1,87 @@
 .gluten-free-body{
     padding: 40px;
+    border: 1px red solid;
 }
+
+.gluten-free-body-title{
+    /* border: 1px yellow solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 150px;
+}
+
+.buttons-outer{
+    /* border: 1px red solid; */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 60px;
+    flex-wrap:wrap;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    gap: 5px;
+    padding: 5px;
+    background: green;
+    color: white;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.icon-outer{
+    background: green;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    
+}
+#community-icon,
+#coeliac-icon,
+#actions-icon,
+#external-icon{
+    width: 120px;
+    height: 120px;
+}
+
+.button-title{
+    text-wrap: nowrap;
+}
+
+h2{
+    font-size: 36px;
+}
+h3{
+    font-size: 30px;
+}
+
+p, li, a{
+    font-size: 20px;
+}
+
+.commitment-outer{
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    background: #e5f7e5;
+}
+
+.commitment-image{
+    height: auto;
+    width: 400px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
