@@ -39,6 +39,10 @@
     cursor: pointer;
 }
 
+.buttons:hover{
+    background: darkgreen;
+}
+
 .icon-outer{
     /* background: green; */
     display: flex;
@@ -72,6 +76,7 @@ p, li, a{
 
 .commitment-outer .commitment-container{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background: #e5f7e5;
@@ -124,19 +129,28 @@ a{
 }
 #external-links li{
     list-style: none;
+    width: 100%;
+}
+
+#external-links a{
     display: flex;
     justify-content: center;
+    width: 100%;
     width: 100%;
     border: 2px solid grey;
     background: green;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
+#external-links a:hover{
+    background: darkgreen;
+}
 .commitment-outer .community-active,
 .commitment-outer .coeliac-active,
 .commitment-outer .actions-active,
 .commitment-outer .external-active{
     display: none;
+
 }

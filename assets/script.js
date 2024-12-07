@@ -211,7 +211,7 @@ $(document).ready(function() {
     //info display
     $(document).on("click", ".buttons", (event)=>{
         let commitmentClicked = $(event.target).attr("class");
-        
+        $(".commitment-outer").css("display", "flex");
 
         if(commitmentClicked.includes("community")){
             $(".commitment-outer").show(200);
@@ -219,6 +219,9 @@ $(document).ready(function() {
             $(".coeliac-active").hide(200);
             $(".actions-active").hide(200);
             $(".external-active").hide(200);
+
+            $(".community-active").css("display", "flex");
+
 
             $(".community-button").css({
                 border: "3px solid black",
@@ -263,6 +266,9 @@ $(document).ready(function() {
             $(".actions-active").hide(200);
             $(".external-active").hide(200);
 
+            $(".coeliac-active").css("display", "flex");
+
+
             $(".coeliac-button").css({
                 border: "3px solid black",
                 background: "rgb(68, 221, 127)"});
@@ -303,6 +309,9 @@ $(document).ready(function() {
             $(".actions-active").show(200);
             $(".external-active").hide(200);
 
+            $(".actions-active").css("display", "flex");
+
+
             $(".action-button").css({
                 border: "3px solid black",
                 background: "rgb(68, 221, 127)"});
@@ -342,6 +351,9 @@ $(document).ready(function() {
             $(".coeliac-active").hide(200);
             $(".actions-active").hide(200);
             $(".external-active").show(200);
+
+            $(".external-active").css("display", "flex");
+
 
             $(".external-button").css({
                 border: "3px solid black",
