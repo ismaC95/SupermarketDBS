@@ -208,14 +208,12 @@ $(document).ready(function() {
     //click counter
     let clickedCount = [0, 0, 0, 0]
     
-
+    //info display
     $(document).on("click", ".buttons", (event)=>{
         let commitmentClicked = $(event.target).attr("class");
         
 
         if(commitmentClicked.includes("community")){
-            clickedCount[0]++
-
             $(".commitment-outer").show(200);
             $(".community-active").show(200);
             $(".coeliac-active").hide(200);
@@ -236,10 +234,14 @@ $(document).ready(function() {
             
             $(".external-button").css({
             border: "",
-            background: ""});
-
-            console.log(clickedCount[0]);
+            background: ""});   
             
+            //restart other buttons counter
+            clickedCount[1] = 0;
+            clickedCount[2] = 0;
+            clickedCount[3] = 0;
+
+            clickedCount[0]++;
 
             if(clickedCount[0] > 1){
                 $(".commitment-outer").hide(200);
@@ -276,6 +278,22 @@ $(document).ready(function() {
             $(".external-button").css({
                 border: "",
                 background: ""});
+
+            clickedCount[1]++;
+            clickedCount[0] = 0;
+            clickedCount[2] = 0;
+            clickedCount[3] = 0;
+
+            if(clickedCount[1] > 1){
+                $(".commitment-outer").hide(200);
+                $(".coeliac-active").hide(200);
+
+                $(".coeliac-button").css({
+                    border: "",
+                    background: ""});
+
+                clickedCount[0] = 0;
+            }
         }
 
         else if(commitmentClicked.includes("action")){
@@ -300,6 +318,22 @@ $(document).ready(function() {
             $(".external-button").css({
                 border: "",
                 background: ""});
+
+            clickedCount[2]++;
+            clickedCount[0] = 0;
+            clickedCount[1] = 0;
+            clickedCount[3] = 0;
+
+            if(clickedCount[2] > 1){
+                $(".commitment-outer").hide(200);
+                $(".action-active").hide(200);
+
+                $(".action-button").css({
+                    border: "",
+                    background: ""});
+
+                clickedCount[2] = 0;
+            }
         }
 
         else if(commitmentClicked.includes("external")){
@@ -324,6 +358,22 @@ $(document).ready(function() {
             $(".action-button").css({
                 border: "",
                 background: ""});
+
+            clickedCount[3]++;
+            clickedCount[0] = 0;
+            clickedCount[1] = 0;
+            clickedCount[2] = 0;
+
+            if(clickedCount[3] > 1){
+                $(".commitment-outer").hide(200);
+                $(".external-active").hide(200);
+
+                $(".external-button").css({
+                    border: "",
+                    background: ""});
+
+                clickedCount[3] = 0;
+            }
         }
     })
 
