@@ -202,34 +202,4 @@ $(document).ready(function() {
         }
     })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // //regex for name and last name validation
-    // //It starts and finishes with a letter and it accepts spaces, - and '
-    // const nameValidation = /^[A-Za-z]+([ -']?[A-Za-z]+)*$/;
-
-    // //ensures starts with an optional prefix that can start with a + and accept numbers between 8 and 15 digits.
-    // const phoneValidation = /^\+?[0-9]{1,3}?[ -]?[0-9]{8,15}$/;
-
-    // //email validation following RFC 5322
-    // //before the "@" allows any letter, number or specificly mentioned special character before an optional dot (*)
-    // //after the "@" allows optional use of any number of letter, number or -
-    // //ending in a dot and after the required dot, it allows starting with any letter or 
-    // //number, adding zero or more letters, numbers or - and must end in a letter or number
-    // const emailValidation = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-
-    // //is necessary to have at some point in the input "linkedin."
-    // const linkedInValidation = /\blinkedin\.\b/i;
 });
