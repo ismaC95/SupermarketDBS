@@ -40,7 +40,7 @@
 }
 
 .icon-outer{
-    background: green;
+    /* background: green; */
     display: flex;
     justify-content: center;
     height: auto;
@@ -132,4 +132,11 @@ a{
     color: white;
     padding: 5px;
     border-radius: 5px;
+}
+
+.commitment-outer .community-active,
+.commitment-outer .coeliac-active,
+.commitment-outer .actions-active,
+.commitment-outer .external-active{
+    display: none;
 }

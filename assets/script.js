@@ -202,4 +202,157 @@ $(document).ready(function() {
         }
     })
 
+
+    //--------------------OUR COMMITMENTS------------------------
+
+    //click counter
+    let clickedCount = [0, 0, 0, 0]
+    
+
+    $(document).on("click", ".buttons", (event)=>{
+        let commitmentClicked = $(event.target).attr("class");
+        
+
+        if(commitmentClicked.includes("community")){
+            clickedCount[0]++
+
+            $(".commitment-outer").show(200);
+            $(".community-active").show(200);
+            $(".coeliac-active").hide(200);
+            $(".actions-active").hide(200);
+            $(".external-active").hide(200);
+
+            $(".community-button").css({
+                border: "3px solid black",
+                background: "rgb(68, 221, 127)"});
+
+            $(".coeliac-button").css({
+                border: "",
+                background: ""});
+
+            $(".action-button").css({
+                border: "",
+                background: ""});
+            
+            $(".external-button").css({
+            border: "",
+            background: ""});
+
+            console.log(clickedCount[0]);
+            
+
+            if(clickedCount[0] > 1){
+                $(".commitment-outer").hide(200);
+                $(".community-active").hide(200);
+
+                $(".community-button").css({
+                    border: "",
+                    background: ""});
+
+                clickedCount[0] = 0;
+            }
+
+        }
+
+        else if(commitmentClicked.includes("coeliac")){
+            $(".commitment-outer").show(200);
+            $(".community-active").hide(200);
+            $(".coeliac-active").show(200);
+            $(".actions-active").hide(200);
+            $(".external-active").hide(200);
+
+            $(".coeliac-button").css({
+                border: "3px solid black",
+                background: "rgb(68, 221, 127)"});
+
+            $(".community-button").css({
+                border: "",
+                background: ""});
+
+            $(".action-button").css({
+                border: "",
+                background: ""});
+
+            $(".external-button").css({
+                border: "",
+                background: ""});
+        }
+
+        else if(commitmentClicked.includes("action")){
+            $(".commitment-outer").show(200);
+            $(".community-active").hide(200);
+            $(".coeliac-active").hide(200);
+            $(".actions-active").show(200);
+            $(".external-active").hide(200);
+
+            $(".action-button").css({
+                border: "3px solid black",
+                background: "rgb(68, 221, 127)"});
+
+            $(".community-button").css({
+                border: "",
+                background: ""});
+
+            $(".coeliac-button").css({
+                border: "",
+                background: ""});
+
+            $(".external-button").css({
+                border: "",
+                background: ""});
+        }
+
+        else if(commitmentClicked.includes("external")){
+            $(".commitment-outer").show(200);
+            $(".community-active").hide(200);
+            $(".coeliac-active").hide(200);
+            $(".actions-active").hide(200);
+            $(".external-active").show(200);
+
+            $(".external-button").css({
+                border: "3px solid black",
+                background: "rgb(68, 221, 127)"});
+
+            $(".community-button").css({
+                border: "",
+                background: ""});
+
+            $(".coeliac-button").css({
+                border: "",
+                background: ""});
+
+            $(".action-button").css({
+                border: "",
+                background: ""});
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // //regex for name and last name validation
+    // //It starts and finishes with a letter and it accepts spaces, - and '
+    // const nameValidation = /^[A-Za-z]+([ -']?[A-Za-z]+)*$/;
+
+    // //ensures starts with an optional prefix that can start with a + and accept numbers between 8 and 15 digits.
+    // const phoneValidation = /^\+?[0-9]{1,3}?[ -]?[0-9]{8,15}$/;
+
+    // //email validation following RFC 5322
+    // //before the "@" allows any letter, number or specificly mentioned special character before an optional dot (*)
+    // //after the "@" allows optional use of any number of letter, number or -
+    // //ending in a dot and after the required dot, it allows starting with any letter or 
+    // //number, adding zero or more letters, numbers or - and must end in a letter or number
+    // const emailValidation = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
+    // //is necessary to have at some point in the input "linkedin."
+    // const linkedInValidation = /\blinkedin\.\b/i;
 });
