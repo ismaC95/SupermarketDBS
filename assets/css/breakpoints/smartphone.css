@@ -114,4 +114,39 @@
         font-size: 13px;
     }
 
+
+
+
+    /* -------OUR COMMITMENTS PAGE------ */
+    .gluten-free-body{
+        padding: 10px;
+    }
+    .gluten-free-body-title{
+        padding: 10px;
+    }
+
+    .gluten-free-body h2{
+        font-size: 17px;
+    }
+
+    .gluten-free-body h3{
+        font-size: 15px;
+    }
+
+    .buttons{
+        width: 135px;
+        height: 135px;
+    }
+
+    .buttons-outer p{
+        font-size: 14px;
+    }
+    
+    #community-icon,
+    #coeliac-icon,
+    #actions-icon,
+    #external-icon{
+        width: 60px;
+        height: 60px;
+    }
 }
