@@ -11,8 +11,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
         <link href="../assets/main.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/about/about.css" rel="stylesheet" type="text/css";>
-        <link href="../assets/css/about/submitted.css" rel="stylesheet" type="text/css";>
+        <link href="../assets/css/about/about.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/about/submitted.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/breakpoints/smartphone.css" rel="stylesheet" type="text/css">
         <link href="../assets/images/logo.png" rel="icon" type="image/icon">
         <script defer type="text/javascript" src="../assets/script.js"></script>
     </head>
@@ -25,7 +26,9 @@
                         <div class="narrow-nav-bar">
                             <div class="narrow-nav-bar-initial">
                                 <i id="narrow-nav-bar-drop-down-closed" class="fas fa-bars" style="color: green;"></i>
-                                <a href="../index.html"><image class="nav-pages-icon" src="../assets/images/nav-bar-logo.png"></image></a>
+                                <div class="narrow-nav-bar-icon-outer">
+                                    <a href="../index.html"><image class="nav-pages-icon" src="../assets/images/nav-bar-logo.png"></image></a>
+                                </div>
                             </div>
                             <ul class="narrow-nav-pages">
                                 <li class="narrow-nav-items"><a href="../deals/deals.html">Deals</a></li>
@@ -43,13 +46,15 @@
                         </div>
                     </div>
                 </nav>
+                <div class="header-image">
+                    <div class="image-container">
+                        <img id="contact-image-fullscreen" src="../assets/images/pages/contact-fullview.jpg">
+                        <img id="contact-image-phonescreen" src="../assets/images/pages/contact-phonescreen.jpg">
+                    </div>
+                    <h1 class="page-title" id="contact-page-title">Contact us</h1>
+                </div>
             </header>
             <main>
-                <div class="contact-page-outer">
-                    <div class="image-container">
-                        <img id="contact-image" src="../assets/images/pages/contact-fullview.jpg">
-                    </div>
-                    <h1 id="contact-page-title">Contact us</h1>
                     <section class="submitted-text">
                         <h2>Thank you for submitting your inquiry</h2>
                         <p>We will get back to you in less than 48h to the contact information you provided</p>

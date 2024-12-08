@@ -216,4 +216,22 @@
     #external-links a:hover{
         background: green;
     }
+
+
+    /* SUBMITTED PAGE */
+
+    .submitted-text{
+        margin-top: 20px;
+    }
+    
+    .submitted-text h2{
+        font-size: 17px;
+    }
+
+    .submitted-text p{
+        font-size: 14px;
+    }
+
+
+
 }
