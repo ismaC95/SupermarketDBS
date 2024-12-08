@@ -1,5 +1,7 @@
 
-
+#contact-image-phonescreen{
+    display: none;
+}
 /* --------CONTACT FORM SELECTION --------*/
 .contact-page-selection{
     display:flex;

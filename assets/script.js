@@ -215,13 +215,10 @@ $(document).ready(function() {
 
         if(commitmentClicked.includes("community")){
             $(".commitment-outer").show(200);
-            $(".community-active").show(200);
-            $(".coeliac-active").hide(200);
-            $(".actions-active").hide(200);
-            $(".external-active").hide(200);
-
-            $(".community-active").css("display", "flex");
-
+            $(".community-active").show(200).css("display", "flex");
+            $(".coeliac-active").hide(0);
+            $(".actions-active").hide(0);
+            $(".external-active").hide(0);
 
             $(".community-button").css({
                 border: "3px solid black",
@@ -261,13 +258,10 @@ $(document).ready(function() {
 
         else if(commitmentClicked.includes("coeliac")){
             $(".commitment-outer").show(200);
-            $(".community-active").hide(200);
-            $(".coeliac-active").show(200);
-            $(".actions-active").hide(200);
-            $(".external-active").hide(200);
-
-            $(".coeliac-active").css("display", "flex");
-
+            $(".community-active").hide(0);
+            $(".coeliac-active").show(200).css("display", "flex");
+            $(".actions-active").hide(0);
+            $(".external-active").hide(0);
 
             $(".coeliac-button").css({
                 border: "3px solid black",
@@ -298,19 +292,16 @@ $(document).ready(function() {
                     border: "",
                     background: ""});
 
-                clickedCount[0] = 0;
+                clickedCount[1] = 0;
             }
         }
 
         else if(commitmentClicked.includes("action")){
             $(".commitment-outer").show(200);
-            $(".community-active").hide(200);
-            $(".coeliac-active").hide(200);
-            $(".actions-active").show(200);
-            $(".external-active").hide(200);
-
-            $(".actions-active").css("display", "flex");
-
+            $(".community-active").hide(0);
+            $(".coeliac-active").hide(0);
+            $(".actions-active").show(200).css("display", "flex");
+            $(".external-active").hide(0);
 
             $(".action-button").css({
                 border: "3px solid black",
@@ -347,13 +338,10 @@ $(document).ready(function() {
 
         else if(commitmentClicked.includes("external")){
             $(".commitment-outer").show(200);
-            $(".community-active").hide(200);
-            $(".coeliac-active").hide(200);
-            $(".actions-active").hide(200);
-            $(".external-active").show(200);
-
-            $(".external-active").css("display", "flex");
-
+            $(".community-active").hide(0);
+            $(".coeliac-active").hide(0);
+            $(".actions-active").hide(0);
+            $(".external-active").show(200).css("display", "flex");
 
             $(".external-button").css({
                 border: "3px solid black",
@@ -387,7 +375,7 @@ $(document).ready(function() {
                 clickedCount[3] = 0;
             }
         }
-    })
+    });
 
 
 

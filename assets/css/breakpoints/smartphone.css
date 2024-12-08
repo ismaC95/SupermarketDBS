@@ -1,12 +1,25 @@
 /* smartphone view 0-480px */
 @media only screen and (max-width: 480px){
-    /* -------CONTACT US PAGE------- */
-    
-    /* image */
-    /* -------TO DO------- */
+/* -------OVERALL------- */
+    .header-image{
+        height: 150px;
+    }
 
-    #contact-page-title{
+    .page-title{
+        font-size: 25px;
+        top: 80%;
+        left: 20px;
+    }
+
+/* -------CONTACT US PAGE------- */
+
+    /* HEADER */
+    #contact-image-fullscreen{
         display: none;
+    }
+
+    #contact-image-phonescreen{
+        display:block;
     }
 
     /* icons */
@@ -123,6 +136,7 @@
     }
     .gluten-free-body-title{
         padding: 10px;
+        margin-bottom: 30px;
     }
 
     .gluten-free-body h2{
@@ -133,9 +147,22 @@
         font-size: 15px;
     }
 
+    .buttons-outer{
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
     .buttons{
         width: 135px;
         height: 135px;
+    }
+
+    .buttons:hover{
+        background: green;
+    }
+
+    .buttons-end{
+        padding: 10px;
     }
 
     .buttons-outer p{
@@ -148,5 +175,45 @@
     #external-icon{
         width: 60px;
         height: 60px;
+    }
+
+    .commitment-outer .commitment-container{
+        flex-direction: column;
+        gap: 15px;
+
+    }
+
+    .commitment-text-outer{
+        padding: 0;
+    }
+
+    .commitment-text-outer p,
+    .commitment-text-outer li,
+    .commitment-text-outer a{
+        font-size: 14px;
+    }
+    
+    .commitment-text-outer ul{
+        padding-left: 20px;
+    }
+
+    .coeliac-text,
+    .actions-text{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .commitment-image{
+        width: 300px;
+    }
+
+    #external-links{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #external-links a:hover{
+        background: green;
     }
 }

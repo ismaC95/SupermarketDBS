@@ -153,10 +153,12 @@ html, body{
 
 /* HEADING IMAGE AND TITLE */
 
-.image-container{
+.header-image{
     width: 100%;
     max-height: 300px;
     overflow: hidden;
+    height: auto;
+    position: relative;
 }
 img{
     width:100%;
@@ -166,15 +168,15 @@ img{
 .contact-page-outer{
     height: auto;
     width: 100%;
-    position: relative;
 }
 
-#contact-page-title{
+.page-title{
     position: absolute;
     font-size: 45px;
     color: white;
     font-weight: bolder;
     text-shadow: 3px 3px black;
-    top: 160px;
+    top: 80%;
     left: 40px;
+    transform:translateY(-50%); 
 }
