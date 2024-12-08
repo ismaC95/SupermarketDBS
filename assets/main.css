@@ -192,6 +192,7 @@ img{
     flex-direction: column;
     padding: 20px 40px;
     gap: 20px;
+    margin-top: 40px;
 }
 
 .footer-icons-outer{
@@ -206,6 +207,7 @@ img{
 .footer-icons{
     height: 35px;
     width: 35px;
+    flex-shrink: 0;
 }
 
 .footer-icons-bar{
@@ -226,15 +228,14 @@ img{
     display: flex;
     justify-content: flex-end;
     gap: 40px;
-    width: 300px;
-    max-width: 400px;
+    min-width: 300px;
 }
 .list-left{
     padding: 0;
     display: flex;
     justify-content: flex-start;
     gap: 40px;
-    width: 300px;
+    min-width: 300px;
 }
 
 .footer-nav-map li{
