@@ -130,7 +130,7 @@ html, body{
         width: 100%;
         z-index: 100;
         padding: 0;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
         background:#f5f4f4;
     }
 
@@ -139,13 +139,13 @@ html, body{
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 0 40px;
-        padding-top: 40px;
+        padding: 0 20px;
+        padding-top: 20px;
     }
     
     .narrow-nav-bar a{
         text-decoration: none;
-        font-size: 25px;
+        font-size: 20px;
         text-wrap: nowrap;
         color: green;
     }
