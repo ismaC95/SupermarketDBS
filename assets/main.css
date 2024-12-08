@@ -242,6 +242,11 @@ img{
     list-style: none;
 }
 
+.footer-nav-map a{
+    text-decoration: none;
+    color: white;
+}
+
 #footer-logo{
     max-width: 300px;
     flex-shrink: 1;
