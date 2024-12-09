@@ -1,0 +1,101 @@
+/* -------CAROUSEL------ */
+
+/* IMAGES */
+.carousel-outer{
+    width: 100%;
+    padding: 50px 100px;
+}
+
+.carousel-container{
+    width: 100%;
+    position: relative;
+}
+
+.carousel-container img{
+    width: 100%;
+    height: 700px;
+}
+
+.previous-btn,
+.next-btn{
+    position: absolute;
+    top: 45%;
+    font-size: 40px;
+    width: auto;
+    font-weight: bold;
+    padding: 15px;
+    color: white;
+    border-radius: 5px;
+    text-shadow: 6px 3px black;
+    cursor: pointer;
+}
+
+.carousel-deals,
+.carousel-commitments,
+.carousel-contact{
+    display: none;
+}
+
+/* BUTTONS */
+.previous-btn:hover,
+.next-btn:hover{
+    background: black;
+}
+
+.previous-btn{
+    left: 0;
+}
+
+.next-btn{
+    right: 0;
+}
+
+/* TEXT */
+.carousel-text{
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    text-align: right;
+    background: black;
+    opacity: 0.9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.carousel-title{
+    color: white;
+    font-size: 30px;
+}
+
+.carousel-body{
+    color: white;
+    font-size: 20px;
+}
+
+/* CIRCLES */
+.circle-outer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 20px;
+    background: black;
+    opacity: 0.9;
+    padding: 5px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(192, 192, 192);
+}
+
+.circle:hover{
+    background: grey;
+}
