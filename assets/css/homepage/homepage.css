@@ -16,13 +16,7 @@
     height: 700px;
 }
 
-.carousel-container-wide{
-    display: block;
-}
 
-.carousel-container-narrow{
-    display: none;
-}
 
 .previous-btn,
 .next-btn{
@@ -96,7 +90,7 @@
     background: black;
     opacity: 0.9;
     padding: 5px;
-    width: 100px;
+    width: 120px;
     border-radius: 10px;
     transform: translate(-50%);
 
@@ -106,13 +100,13 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(209, 209, 209);
     cursor: pointer;
 }
 
-.circle:hover
+.circle:hover,
 .circle-active{
-    background: grey;
+    background: rgb(94, 94, 94);
 }
 
 .carousel-animation{

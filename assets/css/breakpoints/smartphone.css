@@ -325,14 +325,13 @@
 
     .circle-outer{
         margin-bottom: 10px;
+        width: 70px;
     }
 
     .circle{
-        width: 10px;
-        height: 10px;
+        width: 7px;
+        height: 7px;
     }
-    .circle:hover{
-    background-color: rgb(192, 192, 192);
-    }
+   
 
 }
