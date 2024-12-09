@@ -377,10 +377,63 @@ $(document).ready(function() {
         }
     });
 
+    // --------HOMEPAGE CAROUSEL-------
 
+    //setting initial image
+    let imageIndex = 1;
+    showImages(imageIndex);
 
+    //Next and previous buttons
+    function plusImage(n){
+        showImages(imageIndex += n);
+    }
 
+    //Controlling the images with the circles
+    function currentImage(n){
+        showImages(imageIndex = n);
+    }
 
+    //main function to understand which image is showing in the carousel and the rest 
+    //of functions can act accordingly
+    function showImages(n){
+        let images = $(".image-wide");
+        let circles = $(".circle");
+
+        //check if there's still more images after the one presenting or if it's the last one
+        if(n > images.length) {imageIndex = 1};
+        if(n < 1){imageIndex = images.length};
+
+        //hide all the images that are not presenting
+        for(let i = 0; i < images.length; i++){
+            $(images[i]).css("display", "none");
+        }
+
+        //deactivate the circles that don't represent the active image
+        for(let i = 0; i < circles.length; i++){
+            $(circles[i]).removeClass("circle-active");
+        }
+
+        //show specific images and active dots
+        $(images[imageIndex - 1]).css("display", "block");
+        $(circles[imageIndex - 1]).addClass("circle-active");
+    }
+
+    
+
+    //Event listeners to use previous functions
+
+    $(document).on("click", ".carousel-btn", (event)=>{
+        //depending on the button clicked, change the image from carousel
+        if($(event.target).hasClass("previous-btn")){plusImage(-1)};
+        if($(event.target).hasClass("next-btn")){plusImage(1)};
+    });
+
+    $(document).on("click", ".circle", (event)=>{
+        if($(event.target).hasClass("circle-one")){currentImage(1)};
+        if($(event.target).hasClass("circle-two")){currentImage(2)};
+        if($(event.target).hasClass("circle-three")){currentImage(3)};
+        if($(event.target).hasClass("circle-four")){currentImage(4)};
+    });
 
 
 

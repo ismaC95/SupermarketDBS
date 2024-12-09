@@ -291,11 +291,11 @@
         height: 280px;
     }
 
-    .carousel-narrow{
+    .carousel-container-narrow{
         display: block;
     }
 
-    .carousel-wide{
+    .carousel-container-wide{
         display: none;
     }
 
@@ -324,7 +324,7 @@
     }
 
     .circle-outer{
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .circle{

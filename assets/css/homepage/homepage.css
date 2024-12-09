@@ -16,7 +16,11 @@
     height: 700px;
 }
 
-.carousel-narrow{
+.carousel-container-wide{
+    display: block;
+}
+
+.carousel-container-narrow{
     display: none;
 }
 
@@ -35,6 +39,7 @@
     transform: translateY(-50%);
 }
 
+.carousel-intro,
 .carousel-deals,
 .carousel-commitments,
 .carousel-contact{
@@ -102,9 +107,20 @@
     height: 15px;
     border-radius: 50%;
     background-color: rgb(192, 192, 192);
+    cursor: pointer;
 }
 
 .circle:hover
 .circle-active{
     background: grey;
+}
+
+.carousel-animation{
+    animation-name: carousel-animation;
+    animation-duration: 1s;
+}
+
+@keyframes carousel-animation{
+    from{opacity: .5}
+    to{opacity:1}
 }
