@@ -280,5 +280,59 @@
     }
 
 
+    /* --------HOMEPAGE-------- */
+    
+    .carousel-outer{
+        padding: 10px;
+        margin-bottom: 73px;
+    }
+
+    .carousel-container img{
+        height: 280px;
+    }
+
+    .carousel-narrow{
+        display: block;
+    }
+
+    .carousel-wide{
+        display: none;
+    }
+
+    .previous-btn,
+    .next-btn{
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .previous-btn:hover,
+    .next-btn:hover{
+        background: transparent;
+    }
+
+    .carousel-text{
+        padding: 5px;
+        right: 5px;
+    }
+
+    .carousel-title{
+        font-size: 16px;
+    }
+
+    .carousel-body{
+        font-size: 14px;
+    }
+
+    .circle-outer{
+        margin-bottom: 5px;
+    }
+
+    .circle{
+        width: 10px;
+        height: 10px;
+    }
+    .circle:hover{
+    background-color: rgb(192, 192, 192);
+    }
 
 }

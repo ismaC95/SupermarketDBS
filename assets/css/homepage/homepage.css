@@ -16,6 +16,10 @@
     height: 700px;
 }
 
+.carousel-narrow{
+    display: none;
+}
+
 .previous-btn,
 .next-btn{
     position: absolute;
@@ -28,6 +32,7 @@
     border-radius: 5px;
     text-shadow: 6px 3px black;
     cursor: pointer;
+    transform: translateY(-50%);
 }
 
 .carousel-deals,
@@ -60,6 +65,7 @@
     opacity: 0.9;
     padding: 20px;
     border-radius: 5px;
+    transform: translateY(-50%);
 }
 
 .carousel-title{
@@ -87,6 +93,8 @@
     padding: 5px;
     width: 100px;
     border-radius: 10px;
+    transform: translate(-50%);
+
 }
 
 .circle{
@@ -96,6 +104,7 @@
     background-color: rgb(192, 192, 192);
 }
 
-.circle:hover{
+.circle:hover
+.circle-active{
     background: grey;
 }
