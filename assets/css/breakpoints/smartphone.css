@@ -15,7 +15,6 @@
 /* FOOTER */
 
 .footer-nav{
-    margin-top: 20px;
     padding: 20px;
     gap: 0px;
 }
@@ -179,6 +178,7 @@
     /* -------OUR COMMITMENTS PAGE------ */
     .gluten-free-body{
         padding: 10px;
+        padding-bottom: 40px;
     }
     .gluten-free-body-title{
         padding: 10px;
@@ -334,4 +334,40 @@
     }
    
 
+    /* --------DEALS------- */
+
+    #deals-container{
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .deal-product-container{
+        padding: 0;
+    }
+
+    .deal-product{
+        min-height: 250px;
+        width: 135px;
+        gap: 5px;
+        padding: 0 5px;
+    }
+
+    .product-price-container,
+    .product-text{
+        padding: 0;
+    }
+
+    .product-name{
+        font-size: 15px;
+    }
+
+    .product-price-inner{
+        font-size: 13px;
+    }
+
+    .kilo-price{
+        font-size: 13px;
+    }
+
+    
 }
